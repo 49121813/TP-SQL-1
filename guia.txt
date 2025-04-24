@@ -1,0 +1,47 @@
+// Ejercicio 1
+
+SELECT *
+FROM alumno
+WHERE fecha_nac > '1994-12-31'
+ORDER BY nombre ASC;
+
+// Ejercicio 2
+
+SELECT *
+FROM alumno
+WHERE email LIKE '%@hotmail.com';
+
+// Ejercicio 3
+
+UPDATE especialidad 
+SET codigo = 'NT'
+WHERE codigo = 'NR';  
+
+TIRA: ERROR:  update or delete on table "especialidad" violates foreign key constraint "especialidad" on table "curso"
+
+// Ejercicio 4
+
+No se puede cambiar porque es la foreign key de otra tabla.
+
+// Ejercicio 5
+
+Se tendria que cambiar de todas las tablas que comparten ese foreign key.
+
+// Ejercicio 6
+
+SELECT COUNT(*)
+FROM alumno
+WHERE nombre LIKE '%Gomez';
+
+// Ejercicio  7
+
+SELECT COUNT(*)
+FROM alumno
+WHERE nombre LIKE 'L%';
+
+// Ejercicio 8
+
+SELECT COUNT(*)
+FROM alumno
+WHERE EXTRACT (MONTH FROM fecha_nac) = 04
+AND EXTRACT (DAY FROM fecha_nac) = 19;
