@@ -45,3 +45,20 @@ SELECT COUNT(*)
 FROM alumno
 WHERE EXTRACT (MONTH FROM fecha_nac) = 04
 AND EXTRACT (DAY FROM fecha_nac) = 19;
+
+// Ejercicio 9 
+
+DELETE FROM alumno
+WHERE fecha_nac < '1994-01-01';
+
+// Ejercio 10
+
+SELECT *
+FROM alumno
+ORDER BY fecha_nac DESC
+LIMIT 10;
+
+// Ejercicio 11
+
+DELETE FROM alumno
+WHERE email like 'yahoo.com';
