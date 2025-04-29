@@ -1,0 +1,48 @@
+ESCRIBIR TEORIA COMMIT ROLLBACK Y AUTO_COMMIT
+
+_________________________________________________________________________________________________
+
+                    JOIN
+
+(esta en la guia de sql, ultima slide presentacion){
+
+JOIN --> la usamos solo con select.
+¿como hago para ver info junta de dos trablas diferentes?
+con JOIN. juntar dos tablas enn la misma query.
+
+new_comando_1: INNER JOIN 
+new_comando_2: ON --> para relacionar con foreign key las dos tablas
+
+......................
+EJEMPLO CON GUIA ALUMNOS:
+
+SELECT C.id, C.nombre, E.descripcion
+FROM curso C INNER JOIN especialidad E
+ON C.especialidad = E.codigo
+
+complicacion: puedo poner mas de unaa tabla (ej: 20)
+.......................
+
+importa el orden que decis FROM de cada tabla porque si una tiene menos columnas que la otra
+si pongo la de mas adelante, 
+
+_________________________________________________________________________________________________
+
+                   GROPU BY
+
+GROUP BY --> me  permite agrupar
+
+.......................
+EJEMPLO CON GUIA ALUMNOS:
+- quiero ver cuantos alumnos tengo por especialidad
+
+SELECT curso_id, COUNT(+) 
+FROM alumno
+GROUP BY curso_id
+.......................
+- conexion GROUP BY + JOIN
+
+SELECT A.curso_id, C.nombre, COUNT(*)
+FROM alumno A INNER JOIN curso C
+ON A.curso_id = C.id
+GROUP BY curso:_id, C.nombre
