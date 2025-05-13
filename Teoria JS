@@ -1,0 +1,75 @@
+Temas:
+  1. JS repaso
+  2. Node JS
+  3. JS + SQL
+  4. Express -> API
+
+Basicamente hacer un backend
+____________________________________________________________________________________________________________________
+
+1. JS repaso
+    (a partir del cheatsheet y una presentacion)
+JS: 
+  - lenguaje de programacion para programar en la web. 
+  - Va de la mano del HTML.
+  - Es un lenguaje dinamico, que permite hacer cosas medio "chanchas". EVITARLAS
+  - se puede hacer lo mismo de muchas maneras, porque tiene muchas versiones.
+
+VARIABLE: espacio de memoria.
+ - Global: accesible de cualquier parte del codigo -> Mala practica para tener un mejor control del programa.
+      Ej: var variable = valor;
+  - Local: accesible en una parte especifica del codigo.
+      Ej: let variable = valor;
+
+FOR: es un loop, algo que se repite.
+  - Sirve para recorrer o repetir un codigo.
+    Ej: for (var i = 0, i < 10, i++) {
+        console.log(i);
+        }
+ - Explicar (del audio) que es cada una de las partes del for              ***********************************
+
+EL ALCANCE LO DAN LAS LLAVES. Esto significa que si declaramos la variable como let, solo conoce qué es i dentro del escode.
+
+Ej 1: 
+    for (var i = 0; i < 10; i++) {
+        console.log(i);
+    }
+    console.log("El valor de i es: " + i); // Output: El valor de i es: 10
+
+Ej 2:
+    for (var i = 0; i < 10; i++) {
+        console.log(i);
+    }
+    console.log("El valor de i es: " + i); // Output: El valor de i es: 10
+
+CONST: variable que, una vez definida, no se puede cambiar.
+
+JS es un lenguaje dinamico. esto es porque no hace falta especificar el tipo de dato, depende de qué le asigne. Ademas, yo puedo hacer que una variable cambie de valor.
+  -> Esto es comodo pero viene con la dificultad al encontrar un error.
+
+DIFERENCIAS ENTRE ARRAY Y OBJETOS:
+
+ ---------------------------------------
+| ARRAY          |  OBJETO              |
+|---------------------------------------|
+| Tiene indices  |  Tiene atributos     |
+|---------------------------------------|
+| Puede tener    |                      |
+| mas de un      |                      |
+| tipo de dato   |                      |
+|---------------------------------------|
+|                | Se parece una tabla  |
+|---------------------------------------|
+| cuando la base | cuando la base de    |
+| de datos nos   | datos nos devuelva   | 
+| devuelva muchos| un row de sql, va    |
+| rows           | a ser esto           |
+|                |                      |
+ ---------------------------------------
+
+TEORIA FUNCTION                                               *****************************************
+
+TEORIA ARROW FUNCTION                                         *****************************************
+
+
+
